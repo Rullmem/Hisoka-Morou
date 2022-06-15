@@ -1041,8 +1041,8 @@ break
                     await hisoka.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`*Sukses Membuka Group*`)).catch((err) => m.reply(jsonformat(err)))
                 } else {
                 let buttons = [
-                        { buttonId: 'group open', buttonText: { displayText: 'Open kh?' }, type: 1 },
-                        { buttonId: 'group close', buttonText: { displayText: 'Close kh?' }, type: 1 }
+                        { buttonId: 'group open', buttonText: { displayText: 'Open'}, type: 1 },
+                        { buttonId: 'group close', buttonText: { displayText: 'Close'}, type: 1 }
                     ]
                     await hisoka.sendButtonText(m.chat, buttons, `Mode Group`, hisoka.user.name, m)
 
@@ -1072,7 +1072,7 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === "on") {
-                if (db.data.chats[m.chat].antilink) return m.reply(`*Sudah Aktif kak Sebelumnya*\n*Jika Anda Bukan Admin,Jangan Coba² Ngirim Link,Kalo Tidak Mau Saya Tendang*`)
+                if (db.data.chats[m.chat].antilink) return m.reply(`*Sudah Aktif kak Sebelumnya*\n\n*NOTE:*\nJika Anda Bukan Admin,Jangan Coba² Ngirim Link,Kalo Tidak Mau Saya Tendang`)
                 db.data.chats[m.chat].antilink = true
                 m.reply(`*Antilink Sekarang Aktif !*\n*Jika Anda Bukan Admin,Jangan Coba² Ngirim Link,Kalo Tidak Mau Saya Tendang*`)
                 } else if (args[0] === "off") {
