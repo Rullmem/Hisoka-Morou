@@ -151,7 +151,7 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
         let isgclink = isLinkThisGc.test(m.text)
         if (isgclink) return m.reply(`*maaf gak jadi, karena kamu ngirim link group ini*`)
         if (isAdmins) return m.reply(`*maaf kamu admin*`)
-        if (isCreator) return m.reply(`*maaf kamu owner bot ku*`)
+        if (isCreator) return m.reply(`*maaf kamu owner ku*`)
         hisoka.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -1072,9 +1072,9 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === "on") {
-                if (db.data.chats[m.chat].antilink) return m.reply(`*Sudah Aktif kak Sebelumnya*`)
+                if (db.data.chats[m.chat].antilink) return m.reply(`*Sudah Aktif kak Sebelumnya*\n*Jika Anda Bukan Admin,Jangan Coba² Ngirim Link,Kalo Tidak Mau Saya Tendang*`)
                 db.data.chats[m.chat].antilink = true
-                m.reply(`*Antilink Sekarang Aktif !*`)
+                m.reply(`*Antilink Sekarang Aktif !*\n*Jika Anda Bukan Admin,Jangan Coba² Ngirim Link,Kalo Tidak Mau Saya Tendang*`)
                 } else if (args[0] === "off") {
                 if (!db.data.chats[m.chat].antilink) return m.reply(`*Sudah Tidak Aktif Sebelumnya*`)
                 db.data.chats[m.chat].antilink = false
@@ -2730,13 +2730,13 @@ let capt = `⭔ Title: ${judul}
 Bot Ini Adalah Beta Multi-Device WhatsApp.
 
 ❏ *Info Creator*
-> Name : *ArullOfc*
-> Nomor : *https://wa.me/6285822347348*
-> Umur : *18*
-> Region : *Indonesia 🇲🇨*
-> Hobyy : *Gtw*
-> Made in : *Kalimantan Selatan*
-> Nama Asli : *Sahrull... Private*
+• Name : *ArullOfc*
+•  Nomor : *https://wa.me/6285822347348*
+•  Umur : *18*
+•  Region : *Indonesia 🇲🇨*
+•  Hobyy : *Gtw*
+•  Made in : *Kalimantan Selatan*
+•  Nama Asli : *Sahrull... Private*
 └───────⭓
 *Silahkan Lihat Menu Dibawah^_^*
 ┌──⭓ *Group Menu*
@@ -3068,7 +3068,7 @@ _Donasi Ngab Jangan Ngarep Free Mulu_`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Status Bot',
+                                    displayText: 'Kecepatan Respon',
                                     id: 'ping'
                                 }
                             }, {
